@@ -23,7 +23,7 @@ export const Navigation = () => {
   }, [signedAccountId, wallet]);
 
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg my-5">
       <div className="container-fluid">
         <Link href="/" passHref legacyBehavior>
           <Image priority src={Staking4} alt="NEAR" width="auto" height="50" className="pt-2 d-inline-block align-text-top" />
@@ -34,14 +34,14 @@ export const Navigation = () => {
 
         <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
           <div class="navbar-nav me-auto mb-2 mb-lg-0 pt-2 mx-auto">
-            <ul className='nav'>
-              <li class="nav-item">
+            <ul className='nav px-3 mx-4'>
+              <li class="nav-item px-3 mx-3">
                 <a class="nav-link active text-light" aria-current="page" href="#">Explora Staking</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item px-3 mx-3">
                 <a class="nav-link text-light" href="#">Conoce mas</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item px-3 mx-3">
                 <a class="nav-link text-light" href="#">Unete a la comunidad</a>
               </li>
             </ul>

@@ -3,6 +3,7 @@ import { create as createStore } from 'zustand';
 
 import { Wallet } from '@/wallets/near-wallet';
 import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/footer';
 import { NetworkId, HelloNearContract } from '@/config';
 
 // Store to share wallet and signed account
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
     <>
       <Navigation />
       {children}
+      <Footer />
     </>
   );
 }
