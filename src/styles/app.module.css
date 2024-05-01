@@ -40,8 +40,8 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(25%, auto));
+  display: contents;
+  /* grid-template-columns: repeat(2, minmax(25%, auto)); */
   max-width: 100%;
   width: var(--max-width);
 }

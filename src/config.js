@@ -7,17 +7,17 @@ const componentsPerNetwork = {
   mainnet: {
     socialDB: 'social.near',
     Lido: 'zavodil.near/widget/Lido',
-    HelloNear: 'gagdiez.near/widget/HelloNear',
+    HelloNear: 'juaner.near/widget/MetaPool.Stake',
     LoveNear: 'gagdiez.near/widget/LoveNear',
   },
   testnet: {
     socialDB: 'v1.social08.testnet',
     Lido: 'influencer.testnet/widget/Lido',
-    HelloNear: 'influencer.testnet/widget/HelloNear',
+    HelloNear: 'juaner.testnet/widget/MetaPool.Stake',
     LoveNear: 'influencer.testnet/widget/LoveNear',
   }
 };
 
-export const NetworkId = 'testnet';
+export const NetworkId = 'mainnet';
 export const HelloNearContract = contractPerNetwork[NetworkId];
 export const Components = componentsPerNetwork[NetworkId];
