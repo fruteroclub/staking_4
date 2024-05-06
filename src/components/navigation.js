@@ -46,7 +46,6 @@ export const Navigation = () => {
               </li>
             </ul>
           </div>
-            <button className="btn btn-secondary" onClick={action} > {label} </button>
         </div>
       </div>
     </nav>

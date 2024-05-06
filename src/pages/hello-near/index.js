@@ -45,7 +45,7 @@ export default function HelloNear() {
         </p>
       </div>
 
-      <div className={styles.center}>
+      {/* <div className={styles.center}>
         <h1 className="w-100">
           The contract says: <code>{greeting}</code>
         </h1>
@@ -69,12 +69,12 @@ export default function HelloNear() {
         <div className="w-100 text-end align-text-center" hidden={loggedIn}>
           <p className="m-0"> Please login to change the greeting </p>
         </div>
-      </div>
+      </div> */}
 
-      <div className={styles.grid}>
+      {/* <div className={styles.grid}>
         <DocsCard />
         <HelloComponentsCard />
-      </div>
+      </div> */}
     </main>
   );
 }

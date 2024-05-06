@@ -72,7 +72,7 @@ export default function Home() {
         </p>
           Conoce más
       </h3>
-        <Carousel />
+        {/* <Carousel /> */}
       </div>
 
       <div className='container' style={{marginTop: '250px'}}>
