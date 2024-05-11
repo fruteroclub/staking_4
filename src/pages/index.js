@@ -10,6 +10,7 @@ import styles from '@/styles/app.module.css';
 import HelloComponents from '@/pages/hello-components';
 import { Carousel } from '@/components/carousel';
 import { Community } from '@/components/community';
+import { HowWorks } from '@/components/how-works';
 import Link from 'next/link';
 
 export default function Home() {
@@ -22,8 +23,8 @@ export default function Home() {
             <Image priority src={TextBanner} alt="banner" width="auto" height="230" className="pt-4 d-inline-block align-text-top" />
           </div>
           <div className='mt-5'>
-            <button type="button" class="btn btn-danger btn-lg mx-2 ms-3">Stake</button>
-            <button type="button" class="btn btn-outline-danger btn-lg text-light ms-3">Conoce Mas</button>
+            <a type="button" class="btn btn-danger btn-lg mx-2 ms-3" href='#staking'>Stake</a>
+            <a type="button" class="btn btn-outline-danger btn-lg text-light ms-3" href='#know_more'>Conoce Mas</a>
           </div>
         </div>
         <div class="col-md-3 col-lg-3 mb-3 mb-sm-0" />
@@ -40,7 +41,7 @@ export default function Home() {
         <Image priority src={Sepparator} alt="milky_way" width="auto" height="210" className="pt-1 d-inline-block align-text-top" />
       </div>
 
-      <div className='d-flex w-60 justify-content-center'>
+      <div className='d-flex w-60 justify-content-center' id='staking'>
       <h1 className="display-1 ms-2 me-3 text-light text-center">
         <p className="text-center text-light fs-6">
           Staking Facil Y Seguro Para Todas y Todos
@@ -50,22 +51,14 @@ export default function Home() {
       </div>
       <div className=''>
         <HelloComponents />
-      {/* <Image
-          className={styles.logo}
-          src={NearLogo}
-          alt="NEAR Logo"
-          width={110 * 1.5}
-          height={28 * 1.5}
-          priority
-        /> */}
       </div>
 
       <div className={styles.grid}>
         <h3 className='display-5'>¿Como funciona?</h3>
-       
+        <HowWorks />
       </div>
 
-      <div className='container my-5'>
+      <div className='container my-5' id='know_more'>
       <h3 className="display-1 ms-2 me-3 text-light text-center">
         <p className="text-center text-light fs-6">
           Explora nuestros recursos educativos
@@ -75,7 +68,7 @@ export default function Home() {
         {/* <Carousel /> */}
       </div>
 
-      <div className='container' style={{marginTop: '250px'}}>
+      <div className='container' style={{marginTop: '250px'}} id='join_us'>
       <h3 className="display-1 ms-2 me-3 text-light">
         <p className="text-light fs-6">
           Crezcamos Juntas y Juntos!

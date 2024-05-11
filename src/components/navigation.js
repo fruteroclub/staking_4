@@ -36,13 +36,13 @@ export const Navigation = () => {
           <div class="navbar-nav me-auto mb-2 mb-lg-0 pt-2 mx-auto">
             <ul className='nav px-3 mx-4'>
               <li class="nav-item px-3 mx-3">
-                <a class="nav-link active text-light" aria-current="page" href="#">Explora Staking</a>
+                <a class="nav-link active text-light" aria-current="page" href="#staking">Explora Staking</a>
               </li>
               <li class="nav-item px-3 mx-3">
-                <a class="nav-link text-light" href="#">Conoce mas</a>
+                <a class="nav-link text-light" href="#know_more">Conoce mas</a>
               </li>
               <li class="nav-item px-3 mx-3">
-                <a class="nav-link text-light" href="#">Unete a la comunidad</a>
+                <a class="nav-link text-light" href="#join_us">Unete a la comunidad</a>
               </li>
             </ul>
           </div>
