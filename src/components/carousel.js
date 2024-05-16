@@ -1,61 +1,79 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import Carousel from 'react-bootstrap/Carousel';
 
-import Curso1 from '/public/curso1.png';
-import Curso2 from '/public/curso2.png';
-import Curso3 from '/public/curso3.png';
-import Curso4 from '/public/curso4.png';
+import Curso1 from '/public/curso_1_NB.webp';
+import Curso2 from '/public/curso_2_mtpool.webp';
+import Curso3 from '/public/LSTC.jpg';
+import Curso4 from '/public/Destacada-Gitcoin.jpg';
+import Curso5 from '/public/bankless.webp';
 
-export const Carousel = () => {
-    return (
-        <>
-          <div id="carouselExampleCaptions" className="carousel slide">
-  <div className="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-        <Image priority src={Curso1} alt="curso1" width="auto" height="230" className="pt-4 d-inline-block align-text-top" />
-      <div className="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div className="carousel-item">
-        <Image priority src={Curso2} alt="curso2" width="auto" height="230" className="pt-4 d-inline-block align-text-top" />
+const contentData = [
+  {
+    id: 1,
+    title: 'Primeros Pasos con MetaPool',
+    description: 'Meta Pool, adentrándonos al mundo del staking',
+    image: Curso1,
+    link: 'https://nacionbankless.substack.com/p/primeros-pasos-con-meta-pool?utm_source=publication-search'
+  },
+  {
+    id: 2,
+    title: 'MetaPool y bienes públicos',
+    description: 'Meta Pool implementa la tecnología Gitcoin para apoyar iniciativas de bienes públicos en América Latina',
+    image: Curso2,
+    link: 'https://nacionbankless.substack.com/p/meta-pool-implementa-la-tecnologia?utm_source=publication-search'
+  },
+  {
+    id: 3,
+    title: 'Que es Liquid Staking',
+    description: 'El liquid staking es una mecanismo de staking que permite a los usuarios seguir accediendo al valor de sus tokens más las recompensas generadas al delegar sus tokens a la red de nodos validadores',
+    image: Curso3,
+    link: 'https://cryptoconexion.com/que-es-el-liquid-staking/'
+  },
+  {
+    id: 4,
+    title: 'Meta Pool: Apoyando proyectos en mercados emergentes con Gitcoin',
+    description: 'La 18.ª ronda de subvenciones de Gitcoin (GG18) se celebró del 7 al 31 de agosto. 14 proyectos de América Latina fueron seleccionados para recibir financiación',
+    image: Curso4,
+    link: 'https://cryptoconexion.com/apoyando-proyectos-mercados-emergentes-gitcoin/'
+  },
+  {
+    id: 5,
+    title: 'Liquid Staking 101',
+    description: 'Guías Bankless sobre Maker, Aave, Curve, Compound, Uniswap, Rocket Pool y Lido',
+    image: Curso5,
+    link: 'https://nacionbankless.substack.com/p/liquid-staking-101'
+  
+  }
+];
 
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div className="carousel-item">
-    <Image priority src={Curso3} alt="curso3" width="auto" height="230" className="pt-4 d-inline-block align-text-top" />
-
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-    <div className="carousel-item">
-    <Image priority src={Curso4} alt="curs4" width="auto" height="230" className="pt-4 d-inline-block align-text-top" />
-
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-        </>
-    );
+export const KnowMore = () => {
+  return (
+      <Carousel>
+      {
+        contentData.map((content) => (
+            <Carousel.Item key={content.id}>
+              <Link href={content.link} target='_blank'>
+              <Image 
+                priority
+                src={content.image}
+                alt="cursos"
+                width="auto"
+                height="600"
+                className="pt-4 d-inline-block align-text-top"
+                style={{
+                  webkitFilter: "blur(5px)",
+                  filter: "blur(2px) opacity(80%)"
+                }}
+              />
+              <Carousel.Caption>
+                <h3>{content.title}</h3>
+                <p>{content.description}</p>
+              </Carousel.Caption>
+              </Link>
+            </Carousel.Item>
+        ))
+      }
+      </Carousel>
+  );
 };

@@ -14,7 +14,7 @@ export const Community = () => {
 
                     <div className="card-body my-4">
                         <h5 className="card-title mb-4">Frutero Club</h5>
-                        <a href="/" className="text-danger d-block" style={{marginBottom: '30px'}}>Linktree</a>
+                        <a href="https://frutero.club/" className="text-danger d-block" style={{marginBottom: '30px'}}>Web Site</a>
                         <a href="https://t.me/+wKyMJjrJPko3NGU5" className="btn btn-outline-danger d-block mt-5 text-light" target='_blank'>Unirme</a>
                     </div>
                     </div>
@@ -24,7 +24,7 @@ export const Community = () => {
                     <Image priority src={NacionBankless} alt="nacion_bankless" width="auto" height="230" className="pt-4 d-inline-block align-text-top" />
                     <div className="card-body my-4">
                         <h5 className="card-title mb-4">Nacion Bankless</h5>
-                        <a href="/" className="text-danger d-block" style={{marginBottom: '30px'}}>Linktree</a>
+                        <a href="https://linktr.ee/NacionBankless" className="text-danger d-block" style={{marginBottom: '30px'}}>Linktree</a>
                         <a href="https://t.me/nacionbankless" className="btn btn-outline-danger d-block mt-5 text-light" target='_blank'>Unirme</a>
                     </div>
                     </div>
@@ -34,7 +34,7 @@ export const Community = () => {
                     <Image priority src={CryptoConexion} alt="crypto_conexion" width="auto" height="230" className="pt-4 d-inline-block align-text-top" />
                     <div className="card-body my-4">
                         <h5 className="card-title mb-4">CryptoConexion</h5>
-                        <a href="/" className="text-danger d-block" style={{marginBottom: '30px'}}>Linktree</a>
+                        <a href="https://cryptoconexion.com/" className="text-danger d-block" style={{marginBottom: '30px'}}>Web Site</a>
                         <a href="https://t.me/comunidadcryptoconexion " className="btn btn-outline-danger d-block mt-5 text-light" target='_blank'>Unirme</a>
                     </div>
                     </div>

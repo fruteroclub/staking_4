@@ -8,7 +8,7 @@ import CTA from '/public/cta.png';
 import Telegram from '/public/telegram.svg';
 import styles from '@/styles/app.module.css';
 import HelloComponents from '@/pages/hello-components';
-import { Carousel } from '@/components/carousel';
+import { KnowMore } from '@/components/carousel';
 import { Community } from '@/components/community';
 import { HowWorks } from '@/components/how-works';
 import Link from 'next/link';
@@ -54,18 +54,17 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <h3 className='display-5'>¿Como funciona?</h3>
         <HowWorks />
       </div>
 
-      <div className='container my-5' id='know_more'>
+      <div className='my-5' id='know_more'>
       <h3 className="display-1 ms-2 me-3 text-light text-center">
         <p className="text-center text-light fs-6">
           Explora nuestros recursos educativos
         </p>
           Conoce más
       </h3>
-        {/* <Carousel /> */}
+        <KnowMore />
       </div>
 
       <div className='container' style={{marginTop: '250px'}} id='join_us'>
@@ -95,8 +94,10 @@ export default function Home() {
           
           <div className="col-md-4 col-lg-4 offset-md-2 me-auto">
               <div className="card-body text-success mt-4 ps-4">
-                <Link href="https://t.me/near_es">
-                  <Image priority src={Telegram} alt="community" width="auto" height="130" className="pt-4 d-inline-block" style={{backgroundColor: 'gray'}} />
+                <Link href="https://t.me/" target='_blank'>
+                  <button type="button" class="btn btn-danger btn-lg text-light ms-3">
+                    <Image priority src={Telegram} alt="community" width="auto" height="130" className="pt-4 d-inline-block" />
+                  </button>
                 </Link>
               </div>
           </div>
