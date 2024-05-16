@@ -2,7 +2,7 @@
 module.exports = {
   "sites": [
     {
-      "slug": "hundreds-thailand-rapid",
+      "slug": "staking-for-latam",
       "distDir": "out",
       "buildCommand": "npm run build"
     }
